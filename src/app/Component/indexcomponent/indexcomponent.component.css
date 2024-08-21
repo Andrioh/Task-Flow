@@ -1,0 +1,119 @@
+@import url(../../../styles.css);
+
+#div-index-dad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+
+#div-index-son{
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
+    width: 80%;
+}
+
+#div-index-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+}
+
+#div-index-message1{
+    text-align: left;
+}
+
+#div-index-message2{
+    text-align: right;
+}
+
+#H1-index-message1{
+    text-align: left;
+    margin-left: 30px;
+    color: var(--Color4);
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+#H2-index-message2{
+    text-align: right;
+    margin-right: 30px;
+    color: var(--Color4);
+}
+
+#div-index-options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    height: 20%;
+}
+
+button{
+    height: 32%;
+    width: 30%;
+    margin: 0px 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--Color4);
+    border: none;
+    color: var(--Color1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btn-index-viewtask{
+    background-color: var(--Color3);
+}
+
+#div-index-yourtask{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+#div-index-message3{
+    text-align: left;
+    width: 80%;
+}
+
+.div-index-yourtask-class{
+    color: var(--Color1);
+    background-color: var(--Color4);
+    padding: 8px;
+    width: 60%;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#div-index-yourtask-son{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+#div-index-yourtask-task1{
+    width: 80%;
+    text-align: left;
+}
+
+#div-index-yourtask-task2{
+    width: 80%;
+    text-align: right;
+}

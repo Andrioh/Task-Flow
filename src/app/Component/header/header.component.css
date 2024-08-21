@@ -1,3 +1,5 @@
+@import url(../../../styles.css);
+
 #div-header-dad{
     display: flex;
     flex-direction: row;

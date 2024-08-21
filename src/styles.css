@@ -38,3 +38,9 @@ a{
     color: var(--Color4);
     text-decoration: none;
 }
+
+a:hover{
+    color: var(--Color4);
+    text-decoration: underline;
+    cursor: pointer;
+}

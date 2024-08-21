@@ -1,3 +1,5 @@
+@import url(../../../styles.css);
+
 #div-account-dad{
     display: flex;
     justify-content: center;
@@ -94,5 +96,28 @@ form{
 #input-account-form-submit:hover{
     scale: 1.1;
     transition: 0.2s;
+    cursor: pointer;
+}
+
+#div-account-form-password{
+    position: relative;
+}
+
+#img-account-form-icon-eye{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15%;
+    height: 28%;
+    width: 10%;
+}
+
+#input-account-form-password{
+    padding-right: 36px;
+}
+
+#btn-view-password{
+    background-color: transparent;
+    border: none;
     cursor: pointer;
 }
