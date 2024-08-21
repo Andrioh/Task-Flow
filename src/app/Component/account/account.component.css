@@ -1,0 +1,98 @@
+#div-account-dad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100vw;
+}
+
+#div-account-son{
+    height: 80%;
+    width: 80%;
+}
+
+#div-account-title{
+    height: 10%;
+    width: 100%;
+}
+
+#div-account-form{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 90%;
+    width: 100%;
+}
+
+form{
+    height: 429px;
+    width: 250px;
+}
+
+.div-account-form{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    height: 15%;
+    width: 100%;
+}
+
+.label-account-form{
+    position: absolute;
+    top: 2%;
+    left: 13%;
+    width: 20%;
+    text-align: center;
+    background-color: #FFFFFF;
+}
+
+#label-account-form-password{
+    width: 30%;
+}
+
+.input-account-form{
+    height: 70%;
+    width: 80%;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--Color4);
+    border-radius: 5px;
+    text-indent: 10px;
+    color: #000000;
+}
+
+.input-account-form::placeholder{
+    color: #808080;
+}
+
+#div-account-form-message{
+    text-align: center;
+    margin: 10px 0px;
+}
+
+#div-account-form-submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+}
+
+#input-account-form-submit{
+    height: 100%;
+    width: 80%;
+    background-color: var(--Color4);
+    border-radius: 5px;
+    border: 0px;
+    color: var(--Color1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#input-account-form-submit:hover{
+    scale: 1.1;
+    transition: 0.2s;
+    cursor: pointer;
+}

@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset */
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Variable */
+
+:root{
+
+    --Color1: #FFFFFF;
+    --Color2: #000000;
+    --Color3: #0A004A;
+    --Color4: #2400FF;
+
+}
+
+/* Body */
+
+body{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+
+    /* Background img */
+
+    background-image: url(assets/backgroundimg.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    z-index: 0;
+}
+
+a{
+    color: var(--Color4);
+    text-decoration: none;
+}
