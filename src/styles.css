@@ -44,3 +44,22 @@ a:hover{
     text-decoration: underline;
     cursor: pointer;
 }
+
+button{
+    height: 32%;
+    width: 30%;
+    margin: 0px 10px;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: var(--Color4);
+    border: none;
+    color: var(--Color1);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover{
+    scale: 1.1;
+    cursor: pointer;
+    transition: 0.2s;
+}

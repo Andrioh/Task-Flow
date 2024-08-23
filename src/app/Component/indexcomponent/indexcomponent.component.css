@@ -53,25 +53,6 @@
     height: 20%;
 }
 
-button{
-    height: 32%;
-    width: 30%;
-    margin: 0px 10px;
-    border-radius: 20px;
-    padding: 10px;
-    background-color: var(--Color4);
-    border: none;
-    color: var(--Color1);
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-button:hover{
-    scale: 1.1;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
 #btn-index-viewtask{
     background-color: var(--Color3);
 }
@@ -90,7 +71,7 @@ button:hover{
     width: 80%;
 }
 
-.div-index-yourtask-class{
+.button-index-yourtask-class{
     color: var(--Color1);
     background-color: var(--Color4);
     padding: 8px;
@@ -108,12 +89,12 @@ button:hover{
     margin: 20px 0px;
 }
 
-#div-index-yourtask-task1{
+#button-index-yourtask-task1{
     width: 80%;
     text-align: left;
 }
 
-#div-index-yourtask-task2{
+#button-index-yourtask-task2{
     width: 80%;
     text-align: right;
 }

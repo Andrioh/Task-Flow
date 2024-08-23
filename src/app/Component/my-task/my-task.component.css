@@ -1,0 +1,150 @@
+#div-mytask-dad{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+}
+
+#div-mytask-son{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-mytask-title{
+    display: flex;
+    margin: 0px 10px;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+}
+
+#div-mytask-name{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+}
+
+#div-mytask-option{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: var(--Color2);
+    width: 50%;
+}
+
+#button-mytask-circle{
+    height: 40px;
+    width: 40px;
+    background-color: var(--Color4);
+    border-radius: 100%;
+    margin-left: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 0px;
+    margin: 0px;
+}
+
+#button-mytask-nt{
+    background-color: transparent;
+    border: none;
+    color: var(--Color2);
+    text-align: right;
+    font-size: 18px;
+}
+
+.icon{
+    height: 60%;
+    width: 60%;
+    margin-right: 3px;
+}
+
+#div-mytask-hud-dad{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#div-mytask-hud-son{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    flex-wrap: nowrap;
+    
+    height: 209px;
+    width: 400px;
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--Color4); 
+    border-radius: 10px;
+}
+
+
+.div-mytask-cub{
+    min-height: 22%;
+    width: 83%;
+    border-radius: 10px;
+    background-color: var(--Color4);
+    margin: 11px 0px;
+    display: flex;
+    flex-direction: row;
+}
+
+.div-mytask-cub-title{
+    width: 70%;
+}
+
+.div-mytask-cub-option{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 30%;
+}
+
+.div-mytask-decoration1{
+    height: 2px;
+    width: 25px;
+    background-color: var(--Color1);
+    margin-bottom: 2px;
+    margin-left: 10px;
+}
+
+.div-mytask-decoration2{
+    height: 2px;
+    width: 35px;
+    background-color: var(--Color1);
+}
+
+.div-mytask-button{
+    margin-right: 17px;
+}
+
+.P-mytask-cub{
+    display: flex;
+    justify-content: left;
+    margin-left: 10px;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    color: var(--Color1);
+    font-weight: bold;
+}
