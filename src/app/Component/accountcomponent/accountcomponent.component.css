@@ -21,14 +21,17 @@
 #div-account-form{
     display: flex;
     justify-content: center;
-    align-content: center;
     height: 90%;
     width: 100%;
 }
 
 form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
     height: 429px;
-    width: 250px;
+    width: 300px;
 }
 
 .div-account-form{
@@ -43,15 +46,8 @@ form{
 
 .label-account-form{
     position: absolute;
-    top: 2%;
-    left: 13%;
-    width: 20%;
     text-align: center;
     background-color: #FFFFFF;
-}
-
-#label-account-form-password{
-    width: 30%;
 }
 
 .input-account-form{
@@ -91,6 +87,7 @@ form{
     color: var(--Color1);
     font-weight: bold;
     transition: 0.2s;
+    margin-top: 10%;
 }
 
 #input-account-form-submit:hover{
@@ -99,25 +96,36 @@ form{
     cursor: pointer;
 }
 
-#div-account-form-password{
-    position: relative;
+/* DIV NAME */
+
+
+#label-account-form-name{
+    top: 4%;
+    left: 12%;
 }
 
-#img-account-form-icon-eye{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 15%;
-    height: 28%;
-    width: 10%;
-}
+/* DIV PASSWORD */
 
-#input-account-form-password{
+
+#label-account-form-password{
     padding-right: 36px;
+    top: -8%;
+    left: 12%;
 }
 
 #btn-view-password{
     background-color: transparent;
+    position: absolute;
     border: none;
     cursor: pointer;
+    height: 10px;
+    width: 10px;
+    top: 14%;
+    right: 18%;
+    margin: 0px;
+}
+
+#img-account-form-icon-eye{
+    height: 24px;
+    width: 24px;
 }
