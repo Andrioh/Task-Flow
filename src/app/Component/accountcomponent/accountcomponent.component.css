@@ -78,7 +78,7 @@ form{
     width: 100%;
 }
 
-#input-account-form-submit{
+.input-account-form-submit{
     height: 100%;
     width: 80%;
     background-color: var(--Color4);
@@ -90,7 +90,7 @@ form{
     margin-top: 10%;
 }
 
-#input-account-form-submit:hover{
+.input-account-form-submit:hover{
     scale: 1.1;
     transition: 0.2s;
     cursor: pointer;
@@ -102,18 +102,19 @@ form{
 #label-account-form-name{
     top: 4%;
     left: 12%;
+    width: 60px;
 }
 
 /* DIV PASSWORD */
 
 
 #label-account-form-password{
-    padding-right: 36px;
     top: -8%;
     left: 12%;
+    width: 80px;
 }
 
-#btn-view-password{
+.btn-view-password{
     background-color: transparent;
     position: absolute;
     border: none;
@@ -125,7 +126,11 @@ form{
     margin: 0px;
 }
 
-#img-account-form-icon-eye{
+.img-account-form-icon-eye{
     height: 24px;
     width: 24px;
+}
+
+.input-password{
+    margin-left: 10px;
 }

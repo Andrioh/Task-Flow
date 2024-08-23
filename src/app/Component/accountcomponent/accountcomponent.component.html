@@ -1,7 +1,8 @@
 <div id="div-account-dad">
     <div id="div-account-son">
         <div id="div-account-title">
-            <h1>Login</h1>
+            <h1 *ngIf="connectverify()">Login</h1>
+            <h1 *ngIf="!connectverify()">Register</h1>
         </div>
 
         <div id="div-account-form">
@@ -9,21 +10,25 @@
 
                 <div class="div-account-form">
                     <label for="name" id="label-account-form-name" class="label-account-form">Name</label>
-                    <input type="text" name="name" autocomplete="off" class="input-account-form" required placeholder="Type here">
+                    <input type="text" name="name" autocomplete="off" class="input-account-form" [(ngModel)]="username" required placeholder="Type here">
                 </div>
                 
                 <div id="div-account-form-password" class="div-account-form">
                     <label for="password" id="label-account-form-password" class="label-account-form">Password</label>
-                    <input type="password" name="password" class="input-account-form" required placeholder="Type here">
-                    <button id="btn-view-password"><img id="img-account-form-icon-eye" src="../../../assets/eyeopen.svg"></button>
+                    <input type="password" name="password" class="input-account-form" maxlength="26" [(ngModel)]="password" *ngIf="eyeother()" required placeholder="Type here">
+                    <input type="text" name="password" class="input-account-form" maxlength="26" [(ngModel)]="password" *ngIf="!eyeother()" required placeholder="Type here">
+                    <button class="btn-view-password"><img class="img-account-form-icon-eye" src="../../../assets/eyeopen.svg" *ngIf="eyeother()" (click)="eyepassword()"></button>
+                    <button class="btn-view-password"><img class="img-account-form-icon-eye" src="../../../assets/eyeclose.svg" *ngIf="!eyeother()" (click)="eyepassword()"></button>
                 </div>
 
                 <div id="div-account-form-message">
-                    <p>Don't have an account yet? <a href="#">Register</a></p>
+                    <p *ngIf="connectverify()">Don't have an account yet? <a (click)="ViewPage()">Register</a></p>
+                    <p *ngIf="!connectverify()">Already have an account? <a (click)="ViewPage()">Login</a></p>
                 </div>
 
                 <div id="div-account-form-submit">
-                    <input id="input-account-form-submit" type="submit" value="Login">
+                    <input *ngIf="connectverify()" (click)="VerifyClick()" class="input-account-form-submit" type="submit" value="Login">
+                    <input *ngIf="!connectverify()" (click)="VerifyClick()" class="input-account-form-submit" type="submit" value="Register">
                 </div>
 
             </form>
