@@ -40,8 +40,6 @@ export class accountcomponent {
 
   VerifyClick() {
     if (this.username && this.password && this.connectfinished == false) {
-      console.log(this.username, this.password)
-
       if (this.currentphase == "register"){
         this.user.RegisterUser(this.username, this.password)
       }else if(this.currentphase == "login"){
