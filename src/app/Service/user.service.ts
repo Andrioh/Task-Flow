@@ -13,6 +13,7 @@ interface User {
 export class UserService {
 
   connected: boolean | undefined;
+  connectedsuccess = false;
   registersuccess: boolean | undefined;
   usernameglobal: string | undefined;
 
@@ -31,11 +32,16 @@ export class UserService {
     return this.registersuccess
   }
 
+  GetConnectSuccess(){
+    return this.connectedsuccess
+  }
+
   FinishRegister(){
     this.registersuccess = false
   }
 
   FinishConnect() {
+    this.connectedsuccess = true
     this.connected = false
   }
 

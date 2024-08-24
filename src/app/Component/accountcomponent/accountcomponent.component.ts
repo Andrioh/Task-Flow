@@ -13,10 +13,10 @@ async function time() {
   standalone: true,
   imports: [CommonModule, FormsModule],
   templateUrl: './accountcomponent.component.html',
-  styleUrl: './accountcomponent.component.css'
+  styleUrls: ['./accountcomponent.component.css']
 })
 
-export class accountcomponent {
+export class AccountComponent {
 
   connected: boolean = false;
   connectedsafe: boolean = false;

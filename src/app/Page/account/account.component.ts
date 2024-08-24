@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from "../../Component/header/header.component";
-import { accountcomponent } from '../../Component/accountcomponent/accountcomponent.component'; 
+import { AccountComponent } from '../../Component/accountcomponent/accountcomponent.component'; 
 
 @Component({
   selector: 'app-account',
   standalone: true,
-  imports: [HeaderComponent, accountcomponent],
+  imports: [HeaderComponent, AccountComponent],
   templateUrl: './account.component.html',
   styleUrl: './account.component.css'
 })
-export class AccountComponent {
+export class accountcomponent {
 
 }
