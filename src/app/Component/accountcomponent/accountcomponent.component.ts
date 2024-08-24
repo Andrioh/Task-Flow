@@ -4,6 +4,10 @@ import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+async function time() {
+  await new Promise(r => setTimeout(r, 2000));
+}
+
 @Component({
   selector: 'app-accountcomponent',
   standalone: true,
@@ -11,11 +15,14 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './accountcomponent.component.html',
   styleUrl: './accountcomponent.component.css'
 })
+
 export class accountcomponent {
+
   connected: boolean = false;
   connectedsafe: boolean = false;
   currentphase: string = "register"
   connectfinished: boolean = false;
+  MessageActual: string = ""
 
   username: string | undefined;
   password: string | undefined;
@@ -38,20 +45,54 @@ export class accountcomponent {
 
   // Checks if the inputs are empty
 
-  VerifyClick() {
+  async VerifyClick() {
     if (this.username && this.password && this.connectfinished == false) {
-      if (this.currentphase == "register"){
+      if (this.currentphase == "register") {
         this.user.RegisterUser(this.username, this.password)
-      }else if(this.currentphase == "login"){
+
+        const registervalue = this.user.GetRegister()
+        if (registervalue == true) {
+          this.MessageActual = "User register"
+          this.user.FinishRegister()
+          await time()
+          this.MessageActual = ""
+
+          this.password = ""
+          this.currentphase = "login"
+          this.ViewPage()
+        }else{
+          this.MessageActual = "[ERRO]: This username already exists"
+          await time()
+          this.MessageActual = ""
+        }
+
+      } else if (this.currentphase == "login") {
         this.user.LoginUser(this.username, this.password)
+        this.connectfinished = this.user.GetConnect() || false
+
+        if (this.connectfinished == true ) {
+          this.MessageActual = "[Success] User found"
+          await time()
+          this.route.navigate(['/home'])
+          this.user.FinishRegister()
+          this.user.FinishConnect()
+          await time()
+          this.MessageActual = ""
+        } else {
+          this.MessageActual = "[ERRO] User not found"
+          await time()
+          this.MessageActual = ""
+        }
+
+
       }
     }
   }
 
-  UserConnectVerify(value: boolean){
+  UserConnectVerify(value: boolean) {
     this.connectedsafe = value
 
-    if (this.connectedsafe == true){
+    if (this.connectedsafe == true) {
       this.connectfinished = true
     }
   }

@@ -14,6 +14,7 @@
 }
 
 #div-account-title{
+    position: relative;
     height: 10%;
     width: 100%;
 }
@@ -96,6 +97,16 @@ form{
     cursor: pointer;
 }
 
+#P-account-message{
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+    color: var(--Color4);
+    text-align: center;
+}
+
 /* DIV NAME */
 
 
@@ -106,7 +117,6 @@ form{
 }
 
 /* DIV PASSWORD */
-
 
 #label-account-form-password{
     top: -8%;

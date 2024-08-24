@@ -13,6 +13,7 @@ interface User {
 export class UserService {
 
   connected: boolean | undefined;
+  registersuccess: boolean | undefined;
   usernameglobal: string | undefined;
 
   private user: User[] = [];
@@ -22,12 +23,28 @@ export class UserService {
     this.user = userdata ? JSON.parse(userdata) : []
   }
 
+  GetConnect() {
+    return this.connected
+  }
+
+  GetRegister(){
+    return this.registersuccess
+  }
+
+  FinishRegister(){
+    this.registersuccess = false
+  }
+
+  FinishConnect() {
+    this.connected = false
+  }
+
   RegisterUser(username: string, password: string) {
     this.UpdateAuto()
 
     if (Array.isArray(this.user)) {
       const usernamefound = this.user.find((user: User) => user.username === username)
-
+      
       if (usernamefound) {
         return console.log('[ERROR] this user already has an account')
       } else {
@@ -39,6 +56,7 @@ export class UserService {
           this.user.push(uservalue)
           localStorage.setItem("User", JSON.stringify(this.user))
           console.log("[SUCCESS] User register")
+          this.registersuccess = true
         } else {
           this.usernameglobal = username
           this.connected = true
@@ -46,6 +64,7 @@ export class UserService {
           this.user.push(uservalue)
           localStorage.setItem("User", JSON.stringify(this.user))
           console.log("[SUCCESS] User register")
+          this.registersuccess = true
         }
       }
     }
@@ -53,17 +72,19 @@ export class UserService {
   }
 
   LoginUser(username: string, password: string) {
-      if (Array.isArray(this.user)){
-        const usernamefound = this.user.find((user: User) => user.username === username)
-
-        if (usernamefound && usernamefound.password === password){
-          this.usernameglobal = usernamefound.username
-          this.connected = true
-          console.log("[SUCESS] User login")
-        }else{
-          return console.log("[ERRO] User not found")
-        }
+    if (Array.isArray(this.user)) {
+      this.UpdateAuto()
+      const usernamefound = this.user.find((user: User) => user.username == username)
+      
+      if (usernamefound && usernamefound.password === password) {
+        this.usernameglobal = usernamefound.username
+        this.connected = true
+        console.log("[SUCESS] User login")
+        return this.GetConnect()
+      } else {
+        return console.log("[ERRO] User not found")
       }
+    }
   }
 
 }
