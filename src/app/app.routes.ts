@@ -7,7 +7,7 @@ import { MyTaskComponent } from './Component/my-task/my-task.component';
 
 export const routes: Routes = [
     {path: '', component: accountcomponent},
-    {path: 'home', component: IndexComponent},
+    {path: 'Home', component: IndexComponent},
     {path: 'New+Task', component: NewTaskComponent},
     {path: 'My+Task', component: MyTaskComponent}
 

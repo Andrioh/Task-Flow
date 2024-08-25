@@ -75,7 +75,7 @@ export class AccountComponent {
           this.MessageActual = "[Success] User found"
           this.page.AlterPage(true)
           await time()
-          this.route.navigate(['/home'])
+          this.route.navigate(['/Home'])
           this.user.FinishRegister()
           this.user.FinishConnect()
           await time()

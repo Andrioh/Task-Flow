@@ -3,6 +3,7 @@ import { UserService } from '../../Service/user.service';
 import { Router } from '@angular/router';
 import { PageService } from '../../Service/page.service';
 import { CommonModule } from '@angular/common';
+import { TaskService } from '../../Service/task.service';
 
 @Component({
   selector: 'app-indexcomponent',
@@ -15,7 +16,9 @@ export class IndexcomponentComponent implements OnInit {
 
   connected: boolean = false
 
-  constructor(private page: PageService, private user: UserService, private route: Router) { };
+  constructor(private task:TaskService, private page: PageService, private user: UserService, private route: Router) { };
+
+  arraytask: any[] = [];
 
   ngOnInit(): void {
     const value = this.page.GetPage()
@@ -23,6 +26,8 @@ export class IndexcomponentComponent implements OnInit {
     if (value == false) {
       this.route.navigate([''])
     }
+
+    this.arraytask = this.task.GetArray()
   }
 
   buttonnewtask() {
@@ -30,6 +35,10 @@ export class IndexcomponentComponent implements OnInit {
   }
   
   buttonmytask(){
+    this.route.navigate(["/My+Task"])
+  }
+
+  TaskView(){
     this.route.navigate(["/My+Task"])
   }
 

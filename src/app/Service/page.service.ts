@@ -20,6 +20,4 @@ export class PageService {
     this.PageSecury = value
   }
 
-  
-
 }

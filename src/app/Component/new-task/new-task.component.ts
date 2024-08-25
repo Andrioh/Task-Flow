@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { TaskService } from '../../Service/task.service';
 import { PageService } from '../../Service/page.service';
+import { HeaderComponent } from "../header/header.component";
 
 async function time() {
   await new Promise(r => setInterval(r, 2000));
@@ -12,7 +13,7 @@ async function time() {
 @Component({
   selector: 'app-new-task',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, HeaderComponent],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css'
 })
@@ -32,7 +33,7 @@ export class NewTaskComponent implements OnInit {
   }
 
   backpage(){
-    this.route.navigate(["/home"])
+    this.route.navigate(["/Home"])
   }
 
   async newtaskclick(){
@@ -40,7 +41,7 @@ export class NewTaskComponent implements OnInit {
       this.task.newtask(this.ngmodelnewtask)
       this.ngmodelnewtask = ""
       await time()
-      this.route.navigate(["/home"])
+      this.route.navigate(["/Home"])
     }
   }
 

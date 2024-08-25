@@ -133,10 +133,6 @@ button{
     background-color: var(--Color1);
 }
 
-.div-mytask-button{
-    margin-right: 17px;
-}
-
 .P-mytask-cub{
     display: flex;
     justify-content: left;
@@ -147,4 +143,35 @@ button{
     width: 100%;
     color: var(--Color1);
     font-weight: bold;
+}
+
+.div-mytask-button{
+    margin-right: 17px;
+    height: 50%;
+    width: 40%;
+}
+
+.btn-close-task-detail{
+    background-color: var(--Color4);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.div-index-task-detail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: 20%;
+    width: 40%;
+}
+
+.btn-button-detail{
+    background-color: var(--Color3);
+    height: 80%;
+    width: 50%;
+    margin: 0px 10px;
 }

@@ -1,3 +1,5 @@
+<app-header></app-header>
+
 <div id="div-mytask-dad">
     <div id="div-mytask-son">
         <div id="div-mytask-title">
@@ -6,54 +8,39 @@
             </div>
             <div id="div-mytask-option">
                 <button id="button-mytask-nt" (click)="newtaskpage()">New task</button>
-                <button id="button-mytask-circle" (click)="backpage()"><img src="../../../assets/arrow.svg" class="icon"></button>
+                <button id="button-mytask-circle" (click)="backpage()">
+                    <img src="../../../assets/arrow.svg" class="icon">
+                </button>
             </div>
         </div>
         <div id="div-mytask-hud-dad">
             <div id="div-mytask-hud-son">
 
-                <div class="div-mytask-cub">
-                    <div class="div-mytask-cub-title">
-                        <p class="P-mytask-cub">Go out with the dog...</p>
+                <ng-container *ngFor="let item of divarray">
+                    <div class="div-mytask-cub" 
+                         [ngStyle]="{'background-color': idselected === item.id ? divcolor : ''}" 
+                         id="{{item.id}}">
+                        <div class="div-mytask-cub-title">
+                            <p class="P-mytask-cub" [innerHTML]="item.done ? '<s>' + item.content + '</s>' : item.content"></p>
+                        </div>
+                        <div class="div-mytask-cub-option" (click)="viewtaskdetail(item.id)">
+                            <button class="div-mytask-button">
+                                <div *ngIf="!detail || idselected !== item.id">
+                                    <div class="div-mytask-decoration1"></div>
+                                    <div class="div-mytask-decoration2"></div>
+                                </div>
+                                <button *ngIf="detail && idselected === item.id" class="btn-close-task-detail">
+                                    X
+                                </button>
+                            </button>
+                        </div>
                     </div>
-                    <div class="div-mytask-cub-option">
-                        <button class="div-mytask-button">
 
-                            <div class="div-mytask-decoration1"></div>
-                            <div class="div-mytask-decoration2"></div>
-
-                        </button>
+                    <div class="div-index-task-detail" *ngIf="detail && idselected === item.id">
+                        <button class="btn-button-detail" (click)="clickdone()">Done</button>
+                        <button class="btn-button-detail" (click)="clickdelete()">Delete</button>
                     </div>
-                </div>
-
-
-                <div class="div-mytask-cub">
-                    <div class="div-mytask-cub-title">
-                        <p class="P-mytask-cub">Go out with the dog...</p>
-                    </div>
-                    <div class="div-mytask-cub-option">
-                        <button class="div-mytask-button">
-
-                            <div class="div-mytask-decoration1"></div>
-                            <div class="div-mytask-decoration2"></div>
-
-                        </button>
-                    </div>
-                </div>
-
-                <div class="div-mytask-cub">
-                    <div class="div-mytask-cub-title">
-                        <p class="P-mytask-cub">Go out with the dog...</p>
-                    </div>
-                    <div class="div-mytask-cub-option">
-                        <button class="div-mytask-button">
-
-                            <div class="div-mytask-decoration1"></div>
-                            <div class="div-mytask-decoration2"></div>
-
-                        </button>
-                    </div>
-                </div>
+                </ng-container>
 
             </div>
         </div>

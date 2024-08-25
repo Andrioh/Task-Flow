@@ -20,18 +20,18 @@
 
             <div id="div-index-yourtask-son">
 
-                <button id="button-index-yourtask-task1" class="button-index-yourtask-class">
-                    <h5>Go out with the dog</h5>
+                <button (click)="TaskView()" *ngFor="let item of arraytask | slice:0:1 " id="button-index-yourtask-task1" class="button-index-yourtask-class">
+                    <h5 [innerHTML]="item.done ? '<s>' + item.content + '</s>' : item.content"></h5>
                 </button>
                 
-                <button id="button-index-yourtask-task2" class="button-index-yourtask-class">
-                    <h5>Read a book</h5>
+                <button (click)="TaskView()" *ngFor="let item of arraytask | slice:1:2 " id="button-index-yourtask-task2" class="button-index-yourtask-class">
+                    <h5 [innerHTML]="item.done ? '<s>' + item.content + '</s>' : item.content"></h5>
                 </button>
 
             </div>
 
             <div id="div-index-options2">
-                <a href="#">View all task</a>
+                <a (click)="TaskView()">View all task</a>
             </div>
 
         </div>

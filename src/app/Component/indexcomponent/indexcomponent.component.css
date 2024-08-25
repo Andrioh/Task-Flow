@@ -54,7 +54,14 @@
     height: 20%;
 }
 
+#btn-index-newtask{
+    display: flex;
+    align-items: center;
+}
+
 #btn-index-viewtask{
+    display: flex;
+    align-items: center;
     background-color: var(--Color3);
 }
 
@@ -73,6 +80,8 @@
 }
 
 .button-index-yourtask-class{
+    display: flex;
+    align-items: center;
     color: var(--Color1);
     background-color: var(--Color4);
     padding: 8px;
@@ -91,11 +100,13 @@
 }
 
 #button-index-yourtask-task1{
+    display: flex;
+    justify-content: left;
     width: 80%;
-    text-align: left;
 }
 
 #button-index-yourtask-task2{
+    display: flex;
+    justify-content: right;
     width: 80%;
-    text-align: right;
 }
