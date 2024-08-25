@@ -49,7 +49,6 @@ export class AccountComponent {
   async VerifyClick() {
     if (this.username && this.password && this.connectfinished == false) {
       if (this.currentphase == "register") {
-        this.user.RegisterUser(this.username, this.password)
 
         const registervalue = this.user.GetRegister()
         if (registervalue == true) {

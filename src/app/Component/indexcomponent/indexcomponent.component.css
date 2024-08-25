@@ -1,6 +1,6 @@
 @import url(../../../styles.css);
 
-#div-index-dad{
+#div-index-dad {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,14 +8,14 @@
     width: 100%;
 }
 
-#div-index-son{
+#div-index-son {
     display: flex;
     flex-direction: row;
     height: 80vh;
     width: 80%;
 }
 
-#div-index-message{
+#div-index-message {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,15 +23,15 @@
     width: 50%;
 }
 
-#div-index-message1{
+#div-index-message1 {
     text-align: left;
 }
 
-#div-index-message2{
+#div-index-message2 {
     text-align: right;
 }
 
-#H1-index-message1{
+#H1-index-message1 {
     text-align: left;
     margin-left: 30px;
     color: var(--Color4);
@@ -39,14 +39,14 @@
     margin-bottom: 10px;
 }
 
-#H2-index-message2{
+#H2-index-message2 {
     text-align: right;
     margin-right: 30px;
     color: var(--Color4);
     text-align: center;
 }
 
-#div-index-options{
+#div-index-options {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,18 +54,18 @@
     height: 20%;
 }
 
-#btn-index-newtask{
+#btn-index-newtask {
     display: flex;
     align-items: center;
 }
 
-#btn-index-viewtask{
+#btn-index-viewtask {
     display: flex;
     align-items: center;
     background-color: var(--Color3);
 }
 
-#div-index-yourtask{
+#div-index-yourtask {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,12 +74,12 @@
     width: 50%;
 }
 
-#div-index-message3{
+#div-index-message3 {
     text-align: left;
     width: 80%;
 }
 
-.button-index-yourtask-class{
+.button-index-yourtask-class {
     display: flex;
     align-items: center;
     color: var(--Color1);
@@ -90,7 +90,7 @@
     margin: 10px;
 }
 
-#div-index-yourtask-son{
+#div-index-yourtask-son {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -99,14 +99,23 @@
     margin: 20px 0px;
 }
 
-#button-index-yourtask-task1{
+#button-index-yourtask-task1 {
     display: flex;
     justify-content: left;
     width: 80%;
 }
 
-#button-index-yourtask-task2{
+#button-index-yourtask-task2 {
     display: flex;
     justify-content: right;
     width: 80%;
+}
+
+@media (max-width: 440px) {
+
+    #btn-index-newtask,
+    #btn-index-viewtask {
+        width: 400px;
+    }
+
 }
