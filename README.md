@@ -1,27 +1,11 @@
-# TaskFlow
+# NoteHub
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Technologies used: HTML, CSS, TS, Angula v17
 
-## Development server
+The task system allows users to register, log in, create, mark as completed, and delete tasks, with data stored in local storage and session storage, which checks if the user is logged in, restricting access to other screens if not.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Figma: https://www.figma.com/design/tNv4guKgcBhp39QTehZS8W/Task-Flow?node-id=0-1&t=l8C76bMtOgruYM8Z-1 </br>
+Web: https://task-flow-rouge-two.vercel.app
 
-## Code scaffolding
+![image](https://github.com/user-attachments/assets/f5424ce3-6e4a-40c0-b136-7f3e15bc87d5)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
