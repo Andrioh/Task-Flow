@@ -5,8 +5,8 @@
                 <h1>New task</h1>
             </div>
             <div id="div-newtask-option">
-                <button id="button-newtask-nt">Back</button>
-                <button id="button-newtask-circle"><img src="../../../assets/arrow.svg" class="icon"></button>
+                <button id="button-newtask-nt" (click)="backpage()">Back</button>
+                <button id="button-newtask-circle" (click)="backpage()"><img src="../../../assets/arrow.svg" class="icon"></button>
             </div>
         </div>
         <div id="div-newtask-hud-dad">
@@ -14,10 +14,10 @@
 
                 <div id="div-newtask-form">
                     <label for="label-newtask" id="label-newtask">What needs to be done?</label>
-                    <input type="text" name="label-newtask" id="input-newtask" placeholder="Reply e-mails" required>
+                    <input type="text" name="label-newtask" id="input-newtask" autocomplete="off" [(ngModel)]="ngmodelnewtask" placeholder="Reply e-mails" required>
                 </div>
                 <div id="div-newtask-option2">
-                    <input id="input-newtask2" type="submit" value="Create">
+                    <input id="input-newtask2" (click)="newtaskclick()" type="submit" value="Create">
                 </div>
 
             </form>

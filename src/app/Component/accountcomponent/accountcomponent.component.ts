@@ -3,6 +3,7 @@ import { UserService } from '../../Service/user.service';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { PageService } from '../../Service/page.service';
 
 async function time() {
   await new Promise(r => setTimeout(r, 2000));
@@ -27,7 +28,7 @@ export class AccountComponent {
   username: string | undefined;
   password: string | undefined;
 
-  constructor(private user: UserService, private route: Router) { };
+  constructor(private page: PageService, private user: UserService, private route: Router) { };
 
   connectverify() {
     return this.connected
@@ -72,6 +73,7 @@ export class AccountComponent {
 
         if (this.connectfinished == true ) {
           this.MessageActual = "[Success] User found"
+          this.page.AlterPage(true)
           await time()
           this.route.navigate(['/home'])
           this.user.FinishRegister()
