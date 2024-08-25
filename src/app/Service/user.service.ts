@@ -16,6 +16,7 @@ export class UserService {
   connectedsuccess = false;
   registersuccess: boolean | undefined;
   usernameglobal: string | undefined;
+  username: string | undefined
 
   private user: User[] = [];
 
@@ -24,8 +25,16 @@ export class UserService {
     this.user = userdata ? JSON.parse(userdata) : []
   }
 
+  HasName(name: string){
+    this.username = name
+  }
+
   GetConnect() {
     return this.connected
+  }
+
+  GetName(){
+    return this.username
   }
 
   GetRegister(){

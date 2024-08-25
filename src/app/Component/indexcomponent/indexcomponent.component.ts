@@ -15,6 +15,7 @@ import { TaskService } from '../../Service/task.service';
 export class IndexcomponentComponent implements OnInit {
 
   connected: boolean = false
+  username: string | undefined
 
   constructor(private task:TaskService, private page: PageService, private user: UserService, private route: Router) { };
 
@@ -28,6 +29,9 @@ export class IndexcomponentComponent implements OnInit {
     }
 
     this.arraytask = this.task.GetArray()
+
+    this.username = this.user.GetName()
+  
   }
 
   buttonnewtask() {
